@@ -4,43 +4,52 @@ let products = [
   { unitPrice: 200, productName: "ürün3", discount: true, rate: 2.5 },
 ];
 
-function getProductByName(productName) {
+//- İsme göre filtreleme fonksiyonu
+
+function getProductsByName(productName) {
+  console.log(productName);
   let productsResult = products.filter((p) =>
     p.productName.includes(productName)
   );
-  console.log(`Arama sonucunda ${productsResult.length} adet ürüne ulaşıldı`);
+  console.log(` arama sonucunda ${productsResult.length}  adet ürün`);
 }
+console.log(getProductsByName("ürün"));
 
-function getProductByAlpName() {
+//- İsme göre ilk bulunan productu getirme fonksiyonu
+
+function getProductByFirst() {
   let firstNameResult = products.find(
     (product) => product.productName === "ürün1"
   );
   console.log(`Sıralamadaki ilk ürün ${firstNameResult.productName}`);
 }
 
-getProductByAlpName();
+getProductByFirst();
 
-function unitPriceByParameter() {
+//- unitPrice < Parametre getirme fonksiyonu (array)
+function getUnitPriceByParameterLess(price) {
   let parameters = products.filter((a) => {
-    return a.unitPrice < 175;
+    return a.unitPrice < price;
   });
   console.log("Parametreden küçük ürünler", parameters);
 }
 
-unitPriceByParameter();
+getUnitPriceByParameterLess(175);
 
-function unitPriceByParameter2() {
+//- unitPrice > Parametre getirme fonksiyonu (array)
+
+function getUnitPriceByParameterMore(price) {
   let parameter = products.filter((a) => {
-    return a.unitPrice > 175;
+    return a.unitPrice > price;
   });
   console.log("Parametreden büyük ürünler", parameter);
 }
 
-unitPriceByParameter2();
+getUnitPriceByParameterMore(175);
 
-// - indirimdeki ürünleri getirme
+//- indirimdeki ürünleri getirme
 
-function discountedItems() {
+function getDiscountedItems() {
   let discIt = products.filter((b) => {
     return b.discount === true;
   });
@@ -48,16 +57,15 @@ function discountedItems() {
   console.log("Indirimdeki ürünler", discIt);
 }
 
-discountedItems();
+getDiscountedItems();
 
-// - ürün ekleme
+//- ürün ekleme
 
-function AddItems(product) {
-  products.push(product);
-  console.log("Yeni ürün", products);
+function addItems(unitPrice, productName, discount, rate) {
+  return products.push({ unitPrice, productName, discount, rate });
 }
-
-AddItems({ unitPrice: 1180, productName: "ürün4", discount: true, rate: 3 });
+addItems(1180, "ürün4", true, 3);
+console.log(products);
 
 // - verilen isim ile ürün silme
 
@@ -67,7 +75,6 @@ function removeItemOnce(productName) {
     products.splice(index, 1);
   }
 }
-
 removeItemOnce("ürün2");
 
 // - tüm ürünleri getirme
