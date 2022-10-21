@@ -69,17 +69,17 @@ console.log(products);
 
 // - verilen isim ile ürün silme
 
-function removeItemOnce(productName) {
+function getRemoveItemOnce(productName) {
   let index = products.findIndex((c) => c.productName === productName);
   if (index > -1) {
     products.splice(index, 1);
   }
 }
-removeItemOnce("ürün2");
+getRemoveItemOnce("ürün2");
 
 // - tüm ürünleri getirme
-function Allproduct() {
+function allProduct() {
   console.log(products);
 }
 
-Allproduct();
+allProduct();
