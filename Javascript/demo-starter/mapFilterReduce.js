@@ -60,10 +60,13 @@ let cart = [
 // reduce fonksiyonu
 
 let totalPrice = cart.reduce(
-  (value, cart) => value + cart.unitPrice * cart.quantity,
+  (acc, cartItem) => acc + cartItem.unitPrice * cartItem.quantity,
   0
 );
 
-let totalProductCount = cart.reduce((value, cart) => value + cart.quantity, 0);
+let totalProductCount = cart.reduce(
+  (acc, cartItem) => acc + cartItem.quantity,
+  0
+);
 
-console.log({ totalPrice: totalPrice, totalProductCount: totalProductCount });
+console.log({ totalPrice: totalPrice, totalProductCount: totalProductCount }); //  `Toplam sepet tutarı: ${totalPrice} Sepette Toplam ${totalProductCount} adet
