@@ -28,7 +28,7 @@ console.log("----------------------------------------------------------");
 //     this.instructorName = instructorName;
 //     this.instructorLastName = instructorLastName;
 //   }
-//   detail() {
+//   show() {
 //     console.log(this);
 //   }
 // }
@@ -43,11 +43,11 @@ function instructor(instructorId, instructorName, instructorLastName) {
   this.instructorName = instructorName;
   this.instructorLastName = instructorLastName;
 }
-instructor.prototype.detail = function () {
+instructor.prototype.show = function () {
   console.log(this);
 };
 const instructor1 = new instructor(1, "Engin", "Demirog");
-instructor1.detail();
+instructor1.show();
 
 console.log("----------------------------------------------------------");
 
@@ -59,7 +59,7 @@ class Course {
     this.category = category;
     this.instructor = instructor;
   }
-  show() {
+  detail() {
     console.log(this);
   }
 }
@@ -70,12 +70,12 @@ const course3 = new Course(3, "JAVAT", "Programlama", "Engin Demirog");
 const course4 = new Course(4, "JAVASCRİPT", "Programlama", "Engin Demirog");
 const course5 = new Course(5, "JAVA+REACT", "Programlama", "Engin Demirog");
 const course6 = new Course(6, "TEMEL", "Programlama", "Engin Demirog");
-course1.show();
-course2.show();
-course3.show();
-course4.show();
-course5.show();
-course6.show();
+course1.detail();
+course2.detail();
+course3.detail();
+course4.detail();
+course5.detail();
+course6.detail();
 console.log("----------------------------------------------------------");
 
 class CourseService {
