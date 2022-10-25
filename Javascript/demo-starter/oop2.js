@@ -14,7 +14,9 @@ class HouseService {
 
   list(filterCb) {
     // callback
-    console.log(filterCb !== undefined ? this.houses.filter(filterCb) : this.houses); // ternary operator
+    console.log(
+      filterCb !== undefined ? this.houses.filter(filterCb) : this.houses
+    ); // ternary operator
     // false, 0, null, undefined, NaN, ""
     // Boolean()
   }
@@ -28,6 +30,6 @@ class HouseService {
 // konfigürasyon
 const logger = new SmsLogger(); // PnP, plug and play mimarisi
 //
-const houseService = new HouseService(logger); //x , "email"
+//x , "email"
 const newHouse = new House(3, 2, "Kuzey", 100, 5000);
 houseService.add(newHouse);
