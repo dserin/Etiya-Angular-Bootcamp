@@ -24,7 +24,24 @@ export class ProductListComponent implements OnInit {
   deleteProduct(productName: string){
     this.products=this.products.filter(c => c !== productName);
     
-}
+  }
 
+        //    Reactive forms 
+//   export class AppComponent implements OnInit {
+//   myForm: FormGroup;
 
+// ngOnInit() {
+//     this.myForm = new FormGroup({
+//       productsName: new FormControl('kitap'),
+    
+//     });
+//   }
+
+//    onSubmit(form: FormGroup) {
+//     console.log('productsName', form.value.productsName);
+   
+//   }
+// } 
+
+  
 }

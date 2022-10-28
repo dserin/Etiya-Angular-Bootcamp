@@ -1,3 +1,4 @@
+<!-- Two Way Data Binding  -->
 <p>
   <label> Product Name </label>
   <input type="text" [(ngModel)]="productName" />
@@ -8,3 +9,23 @@
     {{ p }}<button (click)="deleteProduct(p)">delete</button>
   </li>
 </ul>
+
+<!-- ********************************************************************* -->
+<!-- Reactive forms -->
+<!-- <form [formGroup]="myForm">
+  <div>
+    <label>
+      Product Name:
+      <input
+        formControlName="productName"
+        type="text"
+        placeholder="Product name"
+      />
+    </label>
+  </div>
+  <div>
+    <button (click)="addProducts(productName)">add</button>
+    </label>
+  </div>
+</form>
+
