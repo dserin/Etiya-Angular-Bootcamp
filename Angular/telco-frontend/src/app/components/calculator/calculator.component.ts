@@ -1,17 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-calculator',
+  selector: 'my-calculator',
   templateUrl: './calculator.component.html',
-  styleUrls: ['./calculator.component.css']
+  styleUrls: ['./calculator.component.css'],
 })
 export class CalculatorComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-// component initialize edildiğinde çalışır.
+  // component initialize edildiğine çalışır..
   ngOnInit(): void {
     console.log('xxx');
-    
   }
-
 }

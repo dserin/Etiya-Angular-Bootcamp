@@ -7,17 +7,10 @@ import { CalculatorComponent } from './components/calculator/calculator.componen
 import { ListviewComponent } from './components/listview/listview.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    CalculatorComponent,
-    ListviewComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
-  exports:[AppComponent],
+  declarations: [AppComponent, CalculatorComponent, ListviewComponent],
+  imports: [BrowserModule, AppRoutingModule],
+  exports: [],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
