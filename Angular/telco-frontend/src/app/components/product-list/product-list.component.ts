@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductListComponent implements OnInit {
   products: string[] = [];
-  productName:string=""
+  productName: string=""
 
   constructor() { }
 
@@ -17,11 +17,14 @@ export class ProductListComponent implements OnInit {
   getProducts() {
     return this.getProducts
   }
-  addProducts(productName: string) {
+  addProducts(productName: string){
     this.products.push(productName);
-  }
-//   deleteProduct(productName: string) {
-//     this.products = this.products.filter(c => c !== productName);
-//  }
+   
+  } 
+  deleteProduct(productName: string){
+    this.products=this.products.filter(c => c !== productName);
+    
+}
 
-// }
+
+}
